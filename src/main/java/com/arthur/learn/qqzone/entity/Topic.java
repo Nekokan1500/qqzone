@@ -1,16 +1,19 @@
 package com.arthur.learn.qqzone.entity;
 
 import java.util.Date;
+import java.util.List;
 
-public class AuthorReply {
+public class Topic {
 
     private Integer id;
+    private String title;
     private String content;
-    private Date replyDate;
+    private Date topicDate;
     private User author;
-    private Reply reply;
 
-    public AuthorReply(){
+    private List<Reply> replyList;
+
+    public Topic(){
 
     }
 
@@ -22,6 +25,14 @@ public class AuthorReply {
         this.id = id;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     public String getContent() {
         return content;
     }
@@ -30,12 +41,12 @@ public class AuthorReply {
         this.content = content;
     }
 
-    public Date getReplyDate() {
-        return replyDate;
+    public Date getTopicDate() {
+        return topicDate;
     }
 
-    public void setReplyDate(Date replyDate) {
-        this.replyDate = replyDate;
+    public void setTopicDate(Date topicDate) {
+        this.topicDate = topicDate;
     }
 
     public User getAuthor() {
@@ -46,12 +57,12 @@ public class AuthorReply {
         this.author = author;
     }
 
-    public Reply getReply() {
-        return reply;
+    public List<Reply> getReplyList() {
+        return replyList;
     }
 
-    public void setReply(Reply reply) {
-        this.reply = reply;
+    public void setReplyList(List<Reply> replyList) {
+        this.replyList = replyList;
     }
 
     

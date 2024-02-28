@@ -53,4 +53,13 @@ CREATE TABLE t_author_reply (
   PRIMARY KEY (id),
   UNIQUE KEY (replyId,authorId),
   CONSTRAINT FOREIGN KEY (authorId) REFERENCES t_user (id)
+  CONSTRAINT FOREIGN KEY (replyId) REFERENCES t_reply (id)
+);
+
+CREATE TABLE t_friend (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  uid int(11) DEFAULT NULL,
+  fid int(11) DEFAULT NULL,
+  PRIMARY KEY (id),
+  CONSTRAINT FOREIGN KEY (uid) REFERENCES t_user (id)
 );
