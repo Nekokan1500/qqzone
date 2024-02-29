@@ -9,14 +9,14 @@
 <body>
     <div id="div0">
         <div id="div_top">
-            <iframe height="118px" src="frames/top.html" width="100%" frameborder="no"></iframe>
+            <iframe height="118px" th:src="@{/page.do?operate=page&page=frames/top}" width="100%" frameborder="yes"></iframe>
         </div>
         <div id="div_left">
-            <iframe src="frames/left.html" width="100%" frameborder="no">
+            <iframe th:src="@{/page.do?operate=page&page=frames/left}" width="100%" frameborder="yes">
             </iframe>
         </div>
 		<div id="div_main">
-            <iframe src="frames/main.html" scrolling="no" width="100%">
+            <iframe th:src="@{/page.do?operate=page&page=frames/main}" scrolling="no" width="100%">
             </iframe>
         </div>
         <div id="div_bottom">

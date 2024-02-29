@@ -10,7 +10,7 @@
         My friends<br/>
         <ul>
             <li th:if="${#lists.isEmpty(session.user.friendList)}">No friends</li>
-            <li th:unless="${#lists.isEmpty(session.userBasic.friendList)}" th:each="friend : ${session.user.friendList}"
+            <li th:unless="${#lists.isEmpty(session.user.friendList)}" th:each="friend : ${session.user.friendList}"
                 th:text="${friend.loginId}"></li>
         </ul>
     </div>

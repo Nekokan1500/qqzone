@@ -12,4 +12,5 @@
         <property name="userService" ref="userService"/>
         <property name="topicService" ref="topicService"/>
     </bean>
+    <bean id="page" class="com.arthur.learn.qqzone.controller.PageController"></bean>
 </beans>
