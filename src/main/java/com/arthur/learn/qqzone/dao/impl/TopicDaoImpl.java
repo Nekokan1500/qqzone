@@ -11,7 +11,11 @@ public class TopicDaoImpl extends BaseDao<Topic> implements TopicDao{
 
     @Override
     public List<Topic> getTopicsByUser(User user) {
-        return super.getBeanList("SELECT * FROM t_topic WHERE authorId = ?", Topic.class, user.getId());
+        List<Topic> topics =  super.getBeanList("SELECT * FROM t_topic WHERE authorId = ?", Topic.class, user.getId());
+        for (Topic topic: topics){
+            topic.setAuthor(user);
+        }
+        return topics;
     }
 
     @Override
@@ -26,7 +30,8 @@ public class TopicDaoImpl extends BaseDao<Topic> implements TopicDao{
 
     @Override
     public Topic getTopic(Integer id) {
-        return super.getSingleBean("SELECT * FROM t_topic WHERE id = ?", Topic.class, id);
+        Topic topic =  super.getSingleBean("SELECT * FROM t_topic WHERE id = ?", Topic.class, id);
+        return topic;
     } 
     
 }

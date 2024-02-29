@@ -36,6 +36,7 @@ public class ClasspathXmlApplicationContext implements BeanFactory {
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newDefaultInstance();
             DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             Document document = documentBuilder.parse(resourceAsStream);
+            System.out.println(document.toString());
             NodeList beanNodeList = document.getElementsByTagName("bean");
             for (int i = 0; i < beanNodeList.getLength(); i++){
                 Node beanNode = beanNodeList.item(i);

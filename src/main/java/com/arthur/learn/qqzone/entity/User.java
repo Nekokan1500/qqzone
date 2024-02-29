@@ -6,7 +6,6 @@ public class User {
 
     private Integer id;
     private String loginId;
-    private String nickName;
     private String password;
     private String image;
 
@@ -30,14 +29,6 @@ public class User {
 
     public void setLoginId(String loginId) {
         this.loginId = loginId;
-    }
-
-    public String getNickName() {
-        return nickName;
-    }
-
-    public void setNickName(String nickName) {
-        this.nickName = nickName;
     }
 
     public String getPassword() {

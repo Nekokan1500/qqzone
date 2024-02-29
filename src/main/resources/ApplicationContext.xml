@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <beans>
-    <bean id="userDao" class="com.arthur.learn.qqzone.dao.impl.DaoImpl"></bean>
+    <bean id="userDao" class="com.arthur.learn.qqzone.dao.impl.UserDaoImpl"></bean>
     <bean id="topicDao" class="com.arthur.learn.qqzone.dao.impl.TopicDaoImpl"></bean>
     <bean id="topicService" class="com.arthur.learn.qqzone.service.impl.TopicServiceImpl">
-        <proerty name="topicDao" ref="topicDao"></proerty>
+        <property name="topicDao" ref="topicDao"></property>
     </bean>
     <bean id="userService" class="com.arthur.learn.qqzone.service.impl.UserServiceImpl">
-        <proerty name="userDao" ref="userDao"></proerty>
+        <property name="userDao" ref="userDao"></property>
     </bean>
-    <!--
-    <bean id="fruitService" class="com.arthur.learn.proweb.service.impl.FruitServiceImpl">
-        <property name="fruitDao" ref="fruitDao"/>
+    <bean id="user" class="com.arthur.learn.qqzone.controller.UserController">
+        <property name="userService" ref="userService"/>
+        <property name="topicService" ref="topicService"/>
     </bean>
-    <bean id="user" class="com.arthur.learn.proweb.controller.FruitController">
-        <property name="fruitService" ref="fruitService"/>
-    </bean>
-    -->
 </beans>

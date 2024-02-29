@@ -5,7 +5,6 @@ USE qqzonedb;
 CREATE TABLE t_user (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `loginId` varchar(50) DEFAULT NULL,
-  `nickName` varchar(100) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
   `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -52,7 +51,7 @@ CREATE TABLE t_author_reply (
   replyId int(11) DEFAULT NULL,
   PRIMARY KEY (id),
   UNIQUE KEY (replyId,authorId),
-  CONSTRAINT FOREIGN KEY (authorId) REFERENCES t_user (id)
+  CONSTRAINT FOREIGN KEY (authorId) REFERENCES t_user (id),
   CONSTRAINT FOREIGN KEY (replyId) REFERENCES t_reply (id)
 );
 
@@ -63,3 +62,12 @@ CREATE TABLE t_friend (
   PRIMARY KEY (id),
   CONSTRAINT FOREIGN KEY (uid) REFERENCES t_user (id)
 );
+
+INSERT INTO t_user (loginId, password, image)
+VALUES ('arthur',  '1234', 'arthur.png'),
+('marcia', '1234', 'marcia.png'),
+('miona', '1234', 'miona.png'),
+('fenghua', '1234', 'fenghua.png'),
+('fengju', '1234', 'fengju.png'),
+('yongan', '1234', 'yongan.png');
+
