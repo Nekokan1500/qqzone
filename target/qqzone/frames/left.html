@@ -10,8 +10,9 @@
         My friends<br/>
         <ul>
             <li th:if="${#lists.isEmpty(session.user.friendList)}">No friends</li>
-            <li th:unless="${#lists.isEmpty(session.user.friendList)}" th:each="friend : ${session.user.friendList}"
-                th:text="${friend.loginId}"></li>
+            <li th:unless="${#lists.isEmpty(session.user.friendList)}" th:each="friend : ${session.user.friendList}">
+                <a th:href="@{|/user.do?operate=friend&id=${friend.id}|}" th:text="${friend.loginId}" target="_top"></a>
+            </li>
         </ul>
     </div>
 </body>

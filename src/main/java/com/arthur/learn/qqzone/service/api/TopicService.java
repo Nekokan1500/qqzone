@@ -8,4 +8,5 @@ import com.arthur.learn.qqzone.entity.User;
 public interface TopicService {
     List<Topic> getTopicList(User user);
     
+    Topic getTopicById(Integer id);
 }

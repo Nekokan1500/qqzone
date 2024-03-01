@@ -2,9 +2,14 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" th:href="@{/css/common.css}">
-    <link rel="stylesheet" th:href="@{/css/left.css}">
+    <link rel="stylesheet" th:href="@{/css/top.css}">
 </head>
 <body>
-    <h1>Welcome to your dashboard!</h1>
+    <div id="top_title">Welcome to QQZone!</div>
+    <div id="top_link_div">
+        <span th:text="|Welcome to ${session.friend.loginId}'s space!|">Welcome to Jim's space!</span>
+        <span th:if="${session.user.id!=session.friend.id}">
+            <a th:href="@{|/user.do?operate=friend&id=${session.user.id}|}" target="_top">Back to your space</a></span>
+    </div>
 </body>
 </html>

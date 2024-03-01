@@ -13,4 +13,7 @@
         <property name="topicService" ref="topicService"/>
     </bean>
     <bean id="page" class="com.arthur.learn.qqzone.controller.PageController"></bean>
+    <bean id="topic" class="com.arthur.learn.qqzone.controller.TopicController">
+        <property name="topicService" ref="topicService"/>
+    </bean>
 </beans>

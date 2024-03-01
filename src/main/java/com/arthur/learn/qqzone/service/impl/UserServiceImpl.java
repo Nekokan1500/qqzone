@@ -28,5 +28,10 @@ public class UserServiceImpl implements UserService{
         }
         return friendList;
     }
+
+    @Override
+    public User getUserById(Integer id) {
+        return userDao.getUserById(id);
+    }
     
 }

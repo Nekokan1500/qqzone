@@ -22,10 +22,21 @@ public class UserController {
             user.setFriendList(userList);
             user.setTopicList(topicList);
             session.setAttribute("user", user);
+            session.setAttribute("friend", user);
             return "index";
         } else {
             return "login";
         }
+    }
+
+    public String friend(Integer id, HttpSession session){
+        User currentFriend = userService.getUserById(id);
+        List<Topic> topicList = topicService.getTopicList(currentFriend);
+        currentFriend.setTopicList(topicList);
+
+        session.setAttribute("friend", currentFriend);
+        return "index";
+
     }
     
 }

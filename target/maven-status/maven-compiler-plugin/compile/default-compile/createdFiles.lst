@@ -2,6 +2,7 @@ com/arthur/learn/qqzone/controller/PageController.class
 com/arthur/learn/qqzone/service/api/UserService.class
 com/arthur/learn/qqzone/transaction/TransactionManager.class
 com/arthur/learn/qqzone/service/api/TopicService.class
+com/arthur/learn/qqzone/controller/TopicController.class
 com/arthur/learn/qqzone/dao/api/UserDao.class
 com/arthur/learn/qqzone/dao/impl/TopicDaoImpl.class
 com/arthur/learn/qqzone/entity/AuthorReply.class

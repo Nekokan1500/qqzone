@@ -8,4 +8,6 @@ public interface UserService {
     
     User login(String loginId, String password);
     List<User> getFriendList(User user);
+
+    User getUserById(Integer id);
 }

@@ -1,6 +1,7 @@
 /Users/arthurcheng/Documents/Study/qqzone/src/main/java/com/arthur/learn/qqzone/dao/impl/TopicDaoImpl.java
 /Users/arthurcheng/Documents/Study/qqzone/src/main/java/com/arthur/learn/qqzone/entity/AuthorReply.java
 /Users/arthurcheng/Documents/Study/qqzone/src/main/java/com/arthur/learn/qqzone/entity/Topic.java
+/Users/arthurcheng/Documents/Study/qqzone/src/main/java/com/arthur/learn/qqzone/controller/TopicController.java
 /Users/arthurcheng/Documents/Study/qqzone/src/main/java/com/arthur/learn/qqzone/service/impl/UserServiceImpl.java
 /Users/arthurcheng/Documents/Study/qqzone/src/main/java/com/arthur/learn/qqzone/util/StringUtil.java
 /Users/arthurcheng/Documents/Study/qqzone/src/main/java/com/arthur/learn/qqzone/servlet/DispatcherServlet.java

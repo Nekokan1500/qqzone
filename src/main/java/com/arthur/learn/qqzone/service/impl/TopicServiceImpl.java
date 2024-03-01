@@ -15,5 +15,10 @@ public class TopicServiceImpl implements TopicService{
     public List<Topic> getTopicList(User user) {
         return topicDao.getTopicsByUser(user);
     }
+
+    @Override
+    public Topic getTopicById(Integer id) {
+        return topicDao.getTopic(id);
+    }
     
 }
