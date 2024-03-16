@@ -2,11 +2,22 @@
 <beans>
     <bean id="userDao" class="com.arthur.learn.qqzone.dao.impl.UserDaoImpl"></bean>
     <bean id="topicDao" class="com.arthur.learn.qqzone.dao.impl.TopicDaoImpl"></bean>
+    <bean id="replyDao" class="com.arthur.learn.qqzone.dao.impl.ReplyDaoImpl"></bean>
+    <bean id="authorReplyDao" class="com.arthur.learn.qqzone.dao.impl.AuthorReplyDaoImpl"></bean>
     <bean id="topicService" class="com.arthur.learn.qqzone.service.impl.TopicServiceImpl">
         <property name="topicDao" ref="topicDao"></property>
+        <property name="replyService" ref="replyService"></property>
+        <property name="userService" ref="userService"></property>
     </bean>
     <bean id="userService" class="com.arthur.learn.qqzone.service.impl.UserServiceImpl">
         <property name="userDao" ref="userDao"></property>
+    </bean>
+    <bean id="authorReplyService" class="com.arthur.learn.qqzone.service.impl.AuthorReplyServiceImpl">
+        <property name="authorReplyDao" ref="authorReplyDao"></property>
+    </bean>
+    <bean id="replyService" class="com.arthur.learn.qqzone.service.impl.ReplyServiceImpl">
+        <property name="replyDao" ref="replyDao"></property>
+        <property name="authorReplyService" ref="authorReplyService"></property>
     </bean>
     <bean id="user" class="com.arthur.learn.qqzone.controller.UserController">
         <property name="userService" ref="userService"/>

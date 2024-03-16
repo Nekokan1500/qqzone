@@ -9,4 +9,6 @@ public interface TopicService {
     List<Topic> getTopicList(User user);
     
     Topic getTopicById(Integer id);
+
+    Topic getTopic(Integer id);
 }

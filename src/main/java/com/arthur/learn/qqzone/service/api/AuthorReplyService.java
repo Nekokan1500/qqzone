@@ -1,8 +1,9 @@
-package com.arthur.learn.qqzone.dao.api;
+package com.arthur.learn.qqzone.service.api;
 
 import com.arthur.learn.qqzone.entity.AuthorReply;
 
-public interface AuthorReplyDao {
-    
+public interface AuthorReplyService {
+
     AuthorReply getAuthorReplyByReplyId(Integer replyId);
+    
 }

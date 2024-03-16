@@ -21,6 +21,14 @@ public class Topic {
         this.id = id;
     }
 
+    public Topic(Integer id, String title, String content, Date topicDate, Integer authorId) {
+        this.id = id;
+        this.title = title;
+        this.content = content;
+        this.topicDate = topicDate;
+        this.author = new User(authorId);
+    }
+
     public Integer getId() {
         return id;
     }
